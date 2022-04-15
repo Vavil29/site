@@ -5,33 +5,34 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Shelter: main</title>
+	<title>Shelter: main pages</title>
 	<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-	<div class="wrapper">
-		<header class="header">
-			<div class="header__container">
-				<div class="header__logo logo">
-					<a href="./">
-						<h1 class="logo__title">Cozy House</h1>
-						<p class="logo__desc">Shelter for pets in Boston</p>
-					</a>
-				</div>
-				<nav class="header__menu menu">
-					<ul class="menu__list">
-						<li class="menu__item activ"><a href="#about">About the shelter</a>
-							<span></span>
-						</li>
-						<li class="menu__item"><a href="../../pages/pets/index.html">Our pets</a></li>
-						<li class="menu__item"><a href="#help">Help the shelter</a></li>
-						<li class="menu__item"><a href="#contacts">Contacts</a></li>
-					</ul>
-				</nav>
+
+	<header class="header">
+		<div class="header__container">
+			<div class="header__logo logo">
+				<a href="./">
+					<h1 class="logo__title">Cozy House</h1>
+					<p class="logo__desc">Shelter for pets in Boston</p>
+				</a>
 			</div>
-		</header>
-		<main class="main">
+			<nav class="header__menu menu">
+				<ul class="menu__list">
+					<li class="menu__item activ"><a href="#about">About the shelter</a>
+						<span></span>
+					</li>
+					<li class="menu__item"><a href="../../pages/pets/index.html">Our pets</a></li>
+					<li class="menu__item"><a href="#help">Help the shelter</a></li>
+					<li class="menu__item"><a href="#contacts">Contacts</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+	<main class="main">
+		<div class="wrapper">
 			<div class="main__screen">
 				<div class="main__content">
 					<div class="item-main">
@@ -50,9 +51,11 @@
 					<img src="../../assets/start-screen-puppy.png" alt="dog">
 				</div>
 			</div>
+		</div>
+	</main>
 
-		</main>
-		<div class="about" id="about">
+	<div class="about" id="about">
+		<div class="wrapper">
 			<div class="about__cont">
 				<div class="about__petis"><img src="../../assets/about-pets.png" alt=""></div>
 				<div class="about__content">
@@ -74,8 +77,11 @@
 				</div>
 			</div>
 		</div>
-		<div class="pets" id="pets">
+	</div>
 
+
+	<div class="pets" id="pets">
+		<div class="wrapper">
 			<div class="pets__content">
 				<div class="pets__title title">
 					<h3>Our friends who<br>
@@ -102,7 +108,7 @@
 							<div class="car-slid__text">Jennifer</div>
 							<button class="car-slid__bott">Learn more</button>
 						</div>
-						<div class="car-slid card">
+						<div class="car-slid car-slid__hidden card">
 							<div class="car-slid__img"><img src="../../assets/pets-woody.png" alt="Woody"></div>
 							<div class="car-slid__text">Woody</div>
 							<button class="car-slid__bott">Learn more</button>
@@ -116,7 +122,9 @@
 
 			</div>
 		</div>
-		<div class="help" id="help">
+	</div>
+	<div class="help" id="help">
+		<div class="wrapper">
 			<div class="help__content">
 				<div class="help__title title">
 					<h3>How you can help<br>
@@ -124,50 +132,55 @@
 				</div>
 
 				<div class="help__list">
-					<div class="help__items">
-						<div class="cards">
-							<img src="../../assets/icon1.svg" alt="Pet food">
-							<h4>Pet food</h4>
-						</div>
-						<div class="cards">
-							<img src="../../assets/icon2.svg" alt="Transportation">
-							<h4>Transportation</h4>
-						</div>
-						<div class="cards">
-							<img src="../../assets/icon3.svg" alt="Toys">
-							<h4>Toys</h4>
-						</div>
-						<div class="cards">
-							<img src="../../assets/icon4.svg" alt="Bowls and cups">
-							<h4>Bowls and cups</h4>
-						</div>
-						<div class="cards">
-							<img src="../../assets/icon5.svg" alt="Shampoos">
-							<h4>Shampoos</h4>
-						</div>
+
+					<div class="cards">
+						<img src="../../assets/icon1.svg" alt="Pet food">
+						<h4>Pet food</h4>
 					</div>
-					<div class="help__item">
-						<div class="cards">
-							<img src="../../assets/icon6.svg" alt="Vitamins">
-							<h4>Vitamins</h4>
-						</div>
-						<div class="cards">
-							<img src="../../assets/icon7.svg" alt="Medicines">
-							<h4>Medicines</h4>
-						</div>
-						<div class="cards">
-							<img src="../../assets/icon8.svg" alt="Collars / leashes">
-							<h4>Collars / leashes</h4>
-						</div>
-						<div class="cards">
-							<img src="../../assets/icon9.svg" alt="Sleeping areas">
-							<h4>Sleeping areas</h4>
-						</div>
+					<div class="cards">
+						<img src="../../assets/icon2.svg" alt="Transportation">
+						<h4>Transportation</h4>
+					</div>
+					<div class="cards">
+						<img src="../../assets/icon3.svg" alt="Toys">
+						<h4>Toys</h4>
+					</div>
+					<div class="cards">
+						<img src="../../assets/icon4.svg" alt="Bowls and cups">
+						<h4>Bowls and cups</h4>
+					</div>
+					<div class="cards">
+						<img src="../../assets/icon5.svg" alt="Shampoos">
+						<h4>Shampoos</h4>
+					</div>
+
+
+					<div class="cards">
+						<img src="../../assets/icon6.svg" alt="Vitamins">
+						<h4>Vitamins</h4>
+					</div>
+					<div class="cards">
+						<img src="../../assets/icon7.svg" alt="Medicines">
+						<h4>Medicines</h4>
+					</div>
+					<div class="cards">
+						<img src="../../assets/icon8.svg" alt="Collars / leashes">
+						<h4>Collars / leashes</h4>
+					</div>
+					<div class="cards">
+						<img src="../../assets/icon9.svg" alt="Sleeping areas">
+						<h4>Sleeping areas</h4>
+						#
 					</div>
 				</div>
 			</div>
 		</div>
-		<div class="donatoin">
+	</div>
+	</div>
+
+	</div>
+	<div class="donatoin">
+		<div class="wrapper">
 			<div class="donatoin__content">
 				<div class="donatoin__dog"><img src="../../assets/donation-dog.png" alt="Dog"></div>
 				<div class="donatoin__contents">
@@ -195,8 +208,12 @@
 			</div>
 		</div>
 
-		<footer class="footer" id="contacts">
-			<div class="footer__content">
+	</div>
+
+	<footer class="footer" id="contacts">
+		<div class="footer__content">
+			<div class="footer__wrap">
+
 				<div class="footer__contacts">
 					<h3 class="title titl">For questions<br> and suggestions</h3>
 					<div class="img one">
@@ -229,13 +246,14 @@
 						</a>
 					</div>
 				</div>
-				<div class="footer__puppy">
-					<img src="../../assets/footer-puppy.png" alt="Puppy">
-				</div>
+			</div>
+			<div class="footer__puppy">
+				<img src="../../assets/footer-puppy.png" alt="Puppy">
 			</div>
 
-		</footer>
-	</div>
+		</div>
+
+	</footer>
 
 </body>
 
