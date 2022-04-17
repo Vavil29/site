@@ -38,7 +38,18 @@ html {
 	// flex: 1 1 auto;
 }
 
-
+.burger{
+	height: 22px;
+        width: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+		  margin-right: 36px;
+        display: none;
+        transition: all 0.3s;
+        cursor: pointer;
+        z-index: 2;
+}
 .header {
 	position: absolute;
 	width: 100%;
@@ -54,6 +65,16 @@ html {
 		max-width: 120rem;
 		padding-top: 6rem;
 	}
+	&__burger{
+		span{
+			height: 2px;
+            width: 100%;
+            background-color:#F1CDB3;
+            display: block;
+				
+		}
+	
+	}
 
 	// .header__logo
 
@@ -63,6 +84,7 @@ html {
 		flex: 1 1 auto;
 	}
 }
+
 
 .logo {
 	display: flex;
@@ -133,16 +155,7 @@ html {
 		}
 	}
 	
-	// span {
-	// 	width: 11.4rem;
-	// 	height: 0.3rem;
-	// 	border-bottom: 3px #f1cdb3 solid;
-	// 	position: absolute;
-
-	// 	top: 10rem;
-
-	// 	left: 83rem;
-	// }
+	
 }
 
 .main {
@@ -329,7 +342,9 @@ html {
 	letter-spacing: 0.06em;
 	color: #545454;
 }
-
+.paginat{
+	display: none;
+}
 .pets {
 	height: 87.7rem;
 	// max-width: 128rem;

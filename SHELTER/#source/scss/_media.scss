@@ -1,4 +1,9 @@
 @include  media-content{
+	
+	.wrapper{
+		width: 100%;
+		overflow: hidden;
+	}
 	.header{
 &__container{
 	padding: 30px;
@@ -6,14 +11,12 @@
 	}
 
 	
-	
-
-
 	 .main {
 		height: 1165px;
 		 &__screen {
 		 flex-direction: column;
 		 margin-top: 150px;
+		 height: auto;
 		//  flex-wrap: wrap;
 	 }
 	 &__content{
@@ -25,18 +28,18 @@
 			height: 593px;
          width: 569px;
 		}
-	 }
-
 	}
+}
+	
 
-
-	.item-main{
+   .item-main{
+		&__title{
+			
+		}
 		padding-top: 0rem;
 		&__button{
 			margin-left: 127px;
-
-
-		}
+}
 	}
 	.about{
 
@@ -63,30 +66,40 @@
 		width: 100%;
 		margin-left: -2rem;
     margin-right: -2rem;
+	 justify-content: space-around;
 	}
 	
+	
 	.pets{
+
 		&__content{
 			width: 100%;
-			// padding-left: 3rem;
-		}
+			margin-top: 8rem;
+			padding: 0 30px;
+			}
 		&__slider{
 			width: 100%;
    //  padding-top: 60px;
 		}
 		&__btn{
-			padding-right: 3rem;
-			padding-left: 3rem;
+			margin-right: 5px;
+		}
+		&__btn2{
+			margin-right: 0;
 		}
 	}
 	.help{
 		padding-bottom: 80px;
 		height: 77.9rem;
+		&__title{
+			padding-top: 42px;
+		}
 		&__content{
 			justify-content: center;
 			width: 100%;
 			margin-top: 0rem;
-			padding-top: 10rem;
+			padding-top: 4rem;
+			height: 100%;
 		}
 		&__list{
 			padding-top: 6rem;
@@ -94,6 +107,7 @@
 			grid-template-columns: 1fr 1fr 1fr;
 			grid-row-gap: 55px;
 			width: 90%;
+			height: auto;
 		}
 	}
 	.cards{
@@ -122,7 +136,7 @@
 	}
 	.contents{
 		&__title{
-		padding-bottom: 2rem;
+			padding-bottom: 20px;
 	}
 	&__desc{
 	padding-top: 2rem;
@@ -149,3 +163,371 @@
 	}
 }
 }
+
+
+
+@include media-tablet{
+
+	.wrapper{
+		width: 100%;
+		overflow: hidden;
+	}
+	.header{
+		&__menu{
+			display: none;
+		}
+		&__container{
+			padding:0;   
+			 margin-top: 30px;
+    justify-content: space-around;
+    width: 100%;
+	 padding: 0px;
+		}
+	}
+	.burger{
+		display: flex;
+	}
+   .logo{
+			margin-left: -0.8rem;
+		}
+.item-main{
+	width: auto;
+	text-align: center;
+	&__title{
+	font-size: 2.5rem;
+	width: 23rem;
+	margin: auto;
+    
+    letter-spacing: 0.06em;
+   
+	
+	}
+	&__button{
+		margin: auto;
+	}
+	&__text{
+		width: auto;
+    height: auto;
+	 padding-bottom: 4.4rem;
+	 padding-right: 1.3rem;
+    padding-left: 1.4rem;
+	}
+}
+.main{
+	padding-bottom: 3px;
+	height: auto;
+&__screen{
+	width: 100%;
+	padding: 0;
+	height: auto;
+}
+&__content{
+	padding: 0;
+}
+&__puppy{
+	padding: 100px 30px 0 52px;
+	margin-top: 0.2rem;
+	width: 260px;
+	img{
+		
+width: 260px; 
+height:271.77px;
+
+	}
+}
+
+
+	}
+
+.about{
+	&__cont{
+		padding: 0;
+		margin-bottom: 4rem;
+	}
+	&__title{
+		text-align: center;
+		width: 29rem;
+		margin-bottom: 0.5rem;
+		
+		margin: 0;
+		margin: auto;
+		padding-bottom: 2rem;
+		// padding-bottom: 2rem;
+		// padding-left: 3.2rem;
+  
+	}
+	&__content{
+		text-align: center;
+		padding-top: 3rem;
+	
+}
+&__petis{
+	margin: auto;
+	padding-bottom: 4rem;
+	padding: 0;
+    padding-top: 20rem;
+    padding-left: 2rem;
+	img{
+		width: 260px;
+		height: 353.6px;
+	}
+}
+&__desc{
+	width: 84%;
+	
+    margin: auto;
+    text-align: left;
+    text-align: justify;
+	 margin-top: 0.5rem;
+}
+&__descp{
+	text-align: justify;
+	width: 84%;
+	
+    margin: auto;
+    padding-top: 2.2rem;
+}
+}
+.car{
+	margin: auto;
+}
+.car-slid{
+	margin: auto;
+	height: 43.9rem;
+	align-items: center;
+	padding-bottom: 30px;
+	border-radius: 9px;
+	&__bott{
+		margin-left: 4rem;
+    margin-bottom: 3rem;
+	 margin: 0;
+	}
+	
+}
+.car-slid2__hidden{
+	display: none;
+}
+.pets__btn{
+	display: none;
+}
+.paginat{
+	display: flex;
+	width: 100%;
+	justify-content: space-around;
+	// padding-left: 27px;
+	// padding-right: 27px;
+	// padding-bottom: 5px;
+	padding: 0 27px 40px;
+}
+.pets{
+	padding-bottom: 4rem;
+	height: auto;
+	&__title{
+		width: 100%;
+		margin-bottom: 15px;
+		margin-top: 2.5rem;
+	}
+		
+	
+	&__content{
+		margin-top: 1.5rem;
+		// height: 707px;
+		height: 100%;
+		justify-content: center;
+		padding-right: 0;
+		padding-left: 0;
+	}
+	
+	&__slider{
+		height: auto;
+		margin-bottom: 2rem;
+	}
+}
+.help{
+	// margin-bottom: 38.5rem;
+	height: 745px;
+	&__title{
+		padding-top: 44px;
+		margin-bottom: 42px;
+	}
+	&__content{
+		padding: 0;
+    height: auto;
+	}
+	&__list{
+		grid-template-columns: 1fr 1fr;
+		// padding-top: 4.2rem;
+		grid-row-gap: 30px;
+		grid-column-gap: 30px;
+		
+    height: 100%;
+	 padding-bottom: 47px;
+	 padding: 0;
+	 
+    width: 290px;
+		// width: 100%;
+	}
+}
+.cards{
+	// width: 159px;
+   //  height: 99px;
+	 display: flex;
+	 width: 130px;
+    height: 87px;
+
+h4{
+	font-size: 1.5rem;
+}
+img{
+	width: 5rem;
+	height: 5rem;
+	margin: 0;
+}
+}
+.donatoin{
+	height: 54.2rem;
+	h3{
+		font-size: 2.5rem;
+	}
+	
+&__content{
+	width: 100%;
+}
+&__contents{
+	padding: 0;
+	margin-bottom: 4rem;
+	text-align: center;
+	padding-top: 42px;
+	h5{
+		line-height: 160%;
+		letter-spacing: 0;
+		font-size: 1.5rem;
+		
+	}
+	
+	
+}
+&__dog{
+	
+	width: 260px;
+	height: 135.2px;
+	padding: 0;
+	padding-left: 3rem;
+		
+		// padding: 4rem 0 0 3.3rem;
+		img{
+			width: 260px;
+		}
+}
+
+}
+.number{ 
+	justify-content: center;
+	left: 0;
+	right: 0;
+	h4{
+	font-size: 1.5rem;
+}
+}
+.contents__input{
+	
+		width: 281px;
+	
+}
+.contents__desc{
+	text-align: justify;
+    padding: 0 20px;
+	 padding-top: 2rem;
+}
+.title{
+	font-family: "Georgia";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 2.5rem;
+    line-height: 130%;
+    letter-spacing: 0.06em;
+    color: #545454;
+}
+.footer{
+	&__puppy{
+		img{
+		width: 260px;
+		margin-top: 18px;
+		}
+	}
+	&__contacts{
+		margin: auto;
+		width: 32.9rem;
+		
+		margin-top: 29px;
+	}
+	
+	&__wrap{
+		flex-direction: column;
+		width: 100%;
+		padding-top: 2.2rem;
+		padding: 0;
+		// padding: 2.3rem 3.5rem 6.5rem;
+	}
+	.too{
+		top: 17.7rem;
+		left: 4rem;
+}
+	
+	.one{
+		top: 10.8rem;
+		left: 3.4rem;
+		
+	}
+	.two{
+		width: 27.6rem;
+		// padding-top: 1.5rem;
+		width: 100%;
+	}
+	.three{
+		top: 0;
+    left: 0;
+    right: 0;
+    justify-content: center;
+   
+    margin-top: 10rem;
+   
+    padding-left: 9px;
+	}
+	.four{
+	top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin-top: 18rem;
+	 padding-left: 9px ;
+	}
+}
+
+.titl{
+	width: 100%;
+	text-align: center;
+	padding-right: 2.7rem;
+	padding-left: 2rem;
+	
+	br{
+		display: none;
+	}
+}
+.mob{
+	margin-top: -1rem;
+    margin-left: 1rem;
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+

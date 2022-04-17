@@ -1,5 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Noto+Sans+Georgian:100,200,300,regular,500,600,700,800,900);
-
+@import './mixin';
 @font-face {
 	font-family: "ArialItalic";
 	src: url("../fonts/ArialItalic/ArialItalic.eot");
@@ -36,7 +36,28 @@ html {
 	margin: 0 auto;
 	flex: 1 1 auto;
 }
+.burger{
+	height: 22px;
+        width: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+		  margin-right: 36px;
+        display: none;
+        transition: all 0.3s;
+        cursor: pointer;
+        z-index: 2;
+}
 .header {
+	&__burger{
+		span{
+			height: 2px;
+				width: 100%;
+				background-color:#F1CDB3;
+				display: block;
+				
+		}
+	}
 	width: 100%;
 	position: fixed;
 	right: 0;
@@ -55,6 +76,16 @@ html {
 		margin: 0 auto;
 		width: 120rem;
 		height: 6rem;
+	}
+	&__burger{
+		span{
+			height: 2px;
+            width: 100%;
+            background-color:#F1CDB3;
+            display: block;
+				
+		}
+	
 	}
 
 	// .header__logo
@@ -129,15 +160,17 @@ html {
 .activ {
 	color: #292929;
 
-	span {
-		width: 5.8rem;
-		height: 0.3rem;
-		border-bottom: 3px #f1cdb3 solid;
-		position: absolute;
-
-		top: 7rem;
-
-		left: 98rem;
+	a {
+		position: relative;
+		&:before{
+			content: '';
+			position: absolute;
+			width: 100%;
+			height: 3px;
+			bottom: -6px;
+			background-color: #f1cdb3;
+			}
+		
 	}
 }
 
@@ -249,14 +282,18 @@ html {
 }
 
 .footer {
-	padding-top: 4.1rem;
+	// padding-top: 4.1rem;
 	height: 35rem;
 	background: url(noise_lines_transparent@2X.png), radial-gradient(100% 215.42% at 0% 0%, #5b483a 0%, #262425 100%);
 	// .footer__content
-
+&__wrap{
+	display: flex;
+	width: 740px;
+    justify-content: space-between;
+}
 	&__content {
 		width: 120rem;
-		height: 31rem;
+		padding-top: 4rem;
 		margin: 0 auto;
 		display: flex;
 		justify-content: space-between;
@@ -322,3 +359,4 @@ html {
 		color: #ffffff;
 	}
 }
+@import './mediapets'
