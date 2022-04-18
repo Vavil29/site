@@ -130,6 +130,9 @@ html {
 		gap: 3.6rem;
 		a {
 			color: #cdcdcd;
+			&:hover{
+				color: #FAFAFA;
+			}
 		}
 	}
 
@@ -144,6 +147,7 @@ html {
 
 .activ {
 	a{
+		color: #FAFAFA;
 		position: relative;
 	&:before{
    	content: '';
@@ -241,8 +245,8 @@ html {
 	&__button {
 		margin-left: -0.2rem;
 		&:hover {
-			background: #ffffff;
-			border: 3px solid #f1cdb3;
+			background: #FDDCC4;
+			// border: 3px solid #f1cdb3;
 		}
 	}
 }
@@ -347,12 +351,12 @@ html {
 }
 .pets {
 	height: 87.7rem;
-	// max-width: 128rem;
+	
 	width: 100%;
 	align-items: center;
 
-	// display: flex;
-	background-color: #f6f6f6;
+	
+	background-color:  #F6F6F6;
 
 	// .pets__content
 	&__content {
@@ -393,8 +397,9 @@ html {
 		cursor: pointer;
 		&:hover {
 			height: 5.2rem;
-			background: #f1cdb3;
+			background: #F1CDB3;
 			border-radius: 10rem;
+			
 		}
 	}
 
@@ -425,8 +430,8 @@ html {
 		align-items: center;
 		color: #292929;
 		&:hover {
-			background: #ffff;
-			border: 2px solid #f1cdb3;
+			background: #FDDCC4;
+			border: 2px solid #FDDCC4;
 		}
 	}
 }
@@ -436,7 +441,8 @@ html {
 	flex-direction: column;
 	justify-content: space-around;
 	height: 100%;
-	background: #fafafa;
+	background: #FAFAFA;
+	border-radius: 9px
 }
 
 .car {
@@ -455,6 +461,10 @@ html {
 	cursor: pointer;
 	&:hover {
 		box-shadow: 5px 5px 7px rgb(0 0 0 / 35%);
+		.car-slid__bott{
+			background: #FDDCC4;
+			border: #FDDCC4;
+		}
 	}
 
 	// .car-slid__img
@@ -483,7 +493,7 @@ html {
 	&__bott {
 		width: 18.7rem;
 		height: 5.2rem;
-		border: 2px solid #f1cdb3;
+		border: 2px solid #F1CDB3;
 		background-color: #fafafa;
 		border-radius: 10rem;
 		font-family: "Georgia";
@@ -496,7 +506,7 @@ html {
 		letter-spacing: 0.06em;
 		color: #292929;
 		&:hover {
-			background: #f1cdb3;
+			background: #FDDCC4;
 		}
 	}
 }
@@ -535,22 +545,7 @@ html {
 		flex-wrap: wrap;
 	}
 
-	// .help__items
-
-	// &__items {
-	// 	display: flex;
-	// 	flex-wrap: wrap;
-   //    justify-content: center;
-	// }
-
-	// .help__item
-
-	// &__item {
-	// 	display: flex;
-	// 	justify-content: space-around;
-	// 	padding-left: 2.1rem;
-	// 	padding-right: 2.2rem;
-	// }
+	
 }
 
 .cards {

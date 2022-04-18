@@ -150,6 +150,9 @@ html {
 		gap: 3.6rem;
 		a {
 			color: #545454;
+			&:hover{
+				color: #292929;
+			}
 		}
 	}
 	&__item .activ {
@@ -158,9 +161,10 @@ html {
 }
 
 .activ {
-	color: #292929;
+	
 
 	a {
+		color: #292929;
 		position: relative;
 		&:before{
 			content: '';
@@ -228,6 +232,7 @@ html {
 	}
 }
 .car-slid {
+	border-radius: 9px;
 	width: 27rem;
 	height: 43.5rem;
 	text-align: center;
@@ -238,10 +243,13 @@ html {
 	background-color: #fafafa;
 	&:hover {
 		box-shadow: 5px 5px 7px rgb(0 0 0 / 35%);
-	}
-	// .car-slid__img
+		.car-slid__bott{
+			background: #FDDCC4;
+			border: #FDDCC4;
+		}
 
-	// .car-slid__text
+	}
+	
 
 	&__text {
 		font-size: 2rem;
@@ -263,7 +271,7 @@ html {
 	&__bott {
 		width: 18.7rem;
 		height: 5.2rem;
-		border: 2px solid #f1cdb3;
+		border: 2px solid #F1CDB3;
 		background-color: #fafafa;
 		border-radius: 10rem;
 		font-family: "Georgia";

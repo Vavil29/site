@@ -17,13 +17,18 @@
 		 flex-direction: column;
 		 margin-top: 150px;
 		 height: auto;
+		 width: 100%;
 		//  flex-wrap: wrap;
 	 }
 	 &__content{
 		padding: 0px 154px;
 	 }
 	 &__puppy{
-		padding: 100px 30px 0 169px;
+		max-width: 698px;
+		width: 76%;
+		align-self: flex-end;
+		padding: 100px 0px;
+		margin: 0;
 		img{
 			height: 593px;
          width: 569px;
@@ -225,9 +230,9 @@
 	padding: 0;
 }
 &__puppy{
-	padding: 100px 30px 0 52px;
+	padding: 100px 0px 0 0px;
 	margin-top: 0.2rem;
-	width: 260px;
+	width: auto;
 	img{
 		
 width: 260px; 

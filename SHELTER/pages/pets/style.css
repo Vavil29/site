@@ -251,14 +251,15 @@ html {
 .menu__list a {
   color: #545454;
 }
+.menu__list a:hover {
+  color: #292929;
+}
 .menu__item .activ {
   color: #292929;
 }
 
-.activ {
-  color: #292929;
-}
 .activ a {
+  color: #292929;
   position: relative;
 }
 .activ a:before {
@@ -341,6 +342,7 @@ html {
 }
 
 .car-slid {
+  border-radius: 9px;
   width: 27rem;
   height: 43.5rem;
   text-align: center;
@@ -361,6 +363,10 @@ html {
   -webkit-box-shadow: 5px 5px 7px rgba(0, 0, 0, 0.35);
           box-shadow: 5px 5px 7px rgba(0, 0, 0, 0.35);
 }
+.car-slid:hover .car-slid__bott {
+  background: #FDDCC4;
+  border: #FDDCC4;
+}
 .car-slid__text {
   font-size: 2rem;
   font-family: "Georgia";
@@ -377,7 +383,7 @@ html {
 .car-slid__bott {
   width: 18.7rem;
   height: 5.2rem;
-  border: 2px solid #f1cdb3;
+  border: 2px solid #F1CDB3;
   background-color: #fafafa;
   border-radius: 10rem;
   font-family: "Georgia";
@@ -479,13 +485,18 @@ html {
   .wrapper {
     width: 100%;
     overflow: hidden;
+    margin: auto;
   }
 
   .header {
-    position: relative;
+    position: fixed;
   }
   .header__container {
     padding: 30px;
+  }
+
+  .main {
+    margin-top: 12rem;
   }
 
   .pets {
@@ -501,13 +512,13 @@ html {
     display: grid;
     -ms-grid-column: 1;
     grid-column: 1fr;
-    -ms-grid-columns: 1fr 1fr;
+    -ms-grid-columns: 1fr 40px 1fr;
     grid-template-columns: 1fr 1fr;
     width: 100%;
     margin-top: 3rem;
-    padding-left: 93px;
     grid-row-gap: 30px;
-    padding-right: 5rem;
+    grid-column-gap: 40px;
+    width: auto;
   }
   .pets__title {
     margin-top: 8rem;
@@ -546,6 +557,13 @@ html {
   }
   .footer__puppy {
     margin: auto;
+  }
+
+  .four {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding-right: 3.2rem;
   }
 }
 @media (max-width: 767px) {
@@ -608,7 +626,7 @@ html {
   }
 
   .pets__card {
-    padding-left: 25px;
+    width: auto;
     -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
   }
@@ -668,6 +686,8 @@ html {
     bottom: 0;
     margin-top: 19rem;
     padding-left: 9px;
+    padding-right: 3rem;
+    padding-left: 0;
   }
 
   .titl {
