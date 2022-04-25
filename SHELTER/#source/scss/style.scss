@@ -27,11 +27,19 @@ $fontFamily: "Noto+Sans+Georgian";
 html {
 	scroll-behavior: smooth;
 }
+body{
+	position: relative;
+}
+.no-overflow{ overflow-y: hidden;
+}
+.hidden{
+	display: none !important;
+}
 .wrapper {
 	
+
+	
 	display: flex;
-	
-	
 	max-width: 120rem;
 	width: 100%;
 	margin: 0 auto;
@@ -49,21 +57,102 @@ html {
         transition: all 0.3s;
         cursor: pointer;
         z-index: 2;
+		  &.active{
+			transform: rotate(90deg)
+		  }
 }
+
+.background-back {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	z-index: 1;
+	background-color: rgba(41, 41, 41, 0.6);
+	display: none;
+	&.active{
+display: block;
+	}
+}
+#dop-menu{
+	width: 320px;
+    top: 0;
+    bottom: 0;
+    background-color: #292929;
+    position: fixed;
+    right: -320px;
+    z-index: 1;
+    transition: all 0.5s;
+    padding-top: 248px;
+	 &.active{
+		 right: 0;
+	 }
+	 ul{
+		 text-align: center;
+		  
+		 a{
+			color: #FAFAFA;
+			font-family: Arial;
+			font-style: normal;
+			font-weight: normal;
+			font-size: 32px;
+			line-height: 160%;
+			align-self: center;
+			margin: 0px 10px;
+			text-decoration: none;
+			margin: 0 0 43px;
+			display: inline-block;
+			&:hover{
+				color:#F1CDB3;
+			}
+		 }
+	
+		 .active a{
+			position: relative;
+			color:#FAFAFA;
+			&::before{
+				content: '';
+					 position: absolute;
+					 width: 100%;
+					 height: 3px;
+					 bottom: 1px;
+					 background-color:#F1CDB3;
+			}
+		}
+
+	 }
+}
+
 .header {
 	position: absolute;
 	width: 100%;
-	z-index: 50;
+	// z-index: 50;
+	top: 61px;
+	right: 0;
+	transition: all 0.5s;
+
 	// .header__container
 	// margin-top: 4rem;
 	&__container {
 		display: flex;
 		// max-height: 6rem;
-		justify-content: space-between;
+		justify-content: flex-end;
+		// justify-content: space-between;
 		align-items: center;
+		max-width: 1200px;
+		width: 100%;
 		margin: 0 auto;
-		max-width: 120rem;
-		padding-top: 6rem;
+		overflow: hidden;
+		// margin: 0 auto;
+		// max-width: 120rem;
+		// padding-top: 6rem;
+		
+	}
+	&.active{
+		position: fixed;
+		z-index: 1;
+		width: 320px;
 	}
 	&__burger{
 		span{
@@ -93,6 +182,7 @@ html {
 	width: 18.4rem;
 	align-content: space-between;
 	cursor: pointer;
+	z-index: 2;
 
 	// .logo__title
 
@@ -123,6 +213,7 @@ html {
 .menu {
 	display: flex;
 	justify-content: flex-end;
+	z-index: 1;
 	// .menu__list
 
 	&__list {
@@ -361,12 +452,13 @@ html {
 	// .pets__content
 	&__content {
 		height: 69.7rem;
-		max-width: 120rem;
+		width: 100%;
 		margin: 0 auto;
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
 		margin-top: 8rem;
+		align-items: center;
 	}
 
 	// .pets__title
@@ -383,11 +475,11 @@ html {
 	&__slider {
 		display: flex;
 		justify-content: space-between;
-		max-width: 120rem;
+		width: 100%;
 
 		height: 43.5rem;
 		// margin-top: 10rem;
-		z-index: 50;
+		// z-index: 50;
 	}
 
 	// .pets__btn
@@ -435,16 +527,174 @@ html {
 		}
 	}
 }
+/* Popap */
+#bg-popap{
+	display: block;
+	z-index: 3;
+}
 
-.card {
+.background-bac{
+	position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 3;
+    background-color: rgba(41, 41, 41, 0.6);
+    display: none;
+	
+}
+.popap{
+	position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
+    z-index: 4;
+    width: 900px;
+    height: 500px;
+    display: flex;
+    align-items: flex-start;
+    background-color: #FAFAFA;
+    border-radius: 9px;
+    animation-name: scale;
+    animation-duration: 0.7s;
+	 .content{
+		padding: 50px 20px 20px 30px;
+			  font-family: Georgia;
+			  font-style: normal;
+			  font-weight: normal;
+			  color: #000;
+			  h3{
+				font-size: 35px;
+				line-height: 130%;
+				letter-spacing: 0.06em;
+				color: #000;
+			  }
+			  .subtitle{
+				font-size: 20px;
+				line-height: 115%;
+				letter-spacing: 0.06em;
+				margin-top: 10px;
+			  }
+			  .description{
+				font-size: 15px;
+				line-height: 115%;
+				margin-top: 40px;
+				letter-spacing: 0.06em;
+			  }
+			  ul{
+				list-style-type: none;
+				margin-top: 40px;
+				padding-left: 14px;
+				li{
+					font-size: 15px;
+						 line-height: 110%;
+						 letter-spacing: 0.06em;
+						 margin-bottom: 12px;
+						 position: relative;
+						 font-family: Georgia;
+						 font-style: normal;
+						 font-weight: normal;
+						 &::before{
+							content: '';
+							width: 4px;
+							height: 4px;
+							background-color: #F1CDB3;
+							position: absolute;
+							left: -14px;
+							top: 7px;
+						 }
+				}
+			  }
+	&::hover{
+		.arrow{
+			background-color: transparent;
+		}
+	}
+	}
+	.arrow{
+		position: absolute;
+        background-color: #F1CDB3;
+        top: -52px;
+        right: -42px;
+		  &:hover{
+			background-color: #F1CDB3;
+		  }
+	}
+}
+
+.wrap-img{
+	img{
+		width: 500px;
+        height: 500px;
+        border-radius: 9px 0px 0px 9px;
+	}
+}
+@keyframes scale {
+	from {
+	  -webkit-transform: translate(-50%, -50%) scale(0);
+				 transform: translate(-50%, -50%) scale(0);
+	}
+	to {
+	  -webkit-transform: translate(-50%, -50%) scale(1);
+				 transform: translate(-50%, -50%) scale(1);
+	}
+ }
+
+ @keyframes fade {
+	from {
+	  opacity: 0;
+	}
+	to {
+	  opacity: 1;
+	}
+ }
+ 
+
+
+#car-wrapper{
 	display: flex;
+	justify-content: space-between;
+	width: 82.5%;
+}
+.card {
+	text-align: center;
 	flex-direction: column;
 	justify-content: space-around;
 	height: 100%;
 	background: #FAFAFA;
-	border-radius: 9px
-}
+	border-radius: 9px;
+  p{
+		font-family: Georgia;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 20px;
+      line-height: 23px;
+      letter-spacing: 0.06em;
+      color: #545454;
+       margin-top: 26px;
 
+	}
+}
+.button_secondary{
+    border: 2px solid #F1CDB3;
+    border-radius: 100px;
+    padding: 13px 43px;
+    background-color: transparent;
+    font-family: Georgia;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 17px;
+    line-height: 130%;
+    letter-spacing: 0.06em;
+    color: #292929;
+    transition: all 0.3s;
+	 margin: 30px 0 ;
+    &:hover{
+        cursor: pointer;
+        background-color: #F1CDB3;
+}
+}
 .car {
 	display: flex;
 	justify-content: space-between;

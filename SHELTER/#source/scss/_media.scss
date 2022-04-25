@@ -4,7 +4,13 @@
 		width: 100%;
 		overflow: hidden;
 	}
+	#dop-menu.active{
+		
+			display: none;
+		}
+	
 	.header{
+		top: 0;
 &__container{
 	padding: 30px;
 }
@@ -74,6 +80,32 @@
 	 justify-content: space-around;
 	}
 	
+
+
+	.popap{
+		width: 630px;
+			  height: 350px;
+			  .wrap-img{
+				  img{
+					width: 350px;
+					height: 350px;
+				  }
+			  }
+	.content{
+		padding: 9px 9px;
+		.description{
+			margin-top: 22px;
+			line-height: 110%;
+			font-size: 13px;
+		}
+		ul{
+			margin-top: 20px;
+			li{
+				margin-bottom: 7px;
+			}
+		}
+	}		  
+	}
 	
 	.pets{
 
@@ -177,16 +209,19 @@
 		width: 100%;
 		overflow: hidden;
 	}
+	#dop-menu.active{
+		display: block;
+	}
 	.header{
 		&__menu{
 			display: none;
 		}
 		&__container{
-			padding:0;   
+			padding:0 19px;   
 			 margin-top: 30px;
-    justify-content: space-around;
+    justify-content: space-between;
     width: 100%;
-	 padding: 0px;
+	
 		}
 	}
 	.burger{
@@ -293,6 +328,34 @@ height:271.77px;
     padding-top: 2.2rem;
 }
 }
+
+
+.popap{
+	width: 75%;
+	height: auto;
+	.wrap-img{
+		img{
+			display: none;
+		}
+	}
+	.content{
+		h3{
+			text-align: center
+		}
+		.subtitle{
+			text-align: center;
+		}
+		.description{
+			font-size: 13px;
+		}
+	}
+	.arrow{
+		right: -30px;
+		top: -55px;
+	}
+}
+
+
 .car{
 	margin: auto;
 }
@@ -322,8 +385,18 @@ height:271.77px;
 	// padding-left: 27px;
 	// padding-right: 27px;
 	// padding-bottom: 5px;
-	padding: 0 27px 40px;
+	padding: 0 27px 45px;
 }
+.card p{
+	margin-top: 3rem;
+}
+
+
+
+
+
+
+
 .pets{
 	padding-bottom: 4rem;
 	height: auto;
@@ -346,6 +419,7 @@ height:271.77px;
 	&__slider{
 		height: auto;
 		margin-bottom: 2rem;
+		justify-content: center;
 	}
 }
 .help{

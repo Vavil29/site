@@ -5,11 +5,28 @@
 		margin: auto;
 	}
 	.header{
+		padding-top: 30px;
+		height: auto;
 		position: fixed;
 		
 &__container{
-	padding: 30px;
+	padding: 0 30px;
 }
+	}
+.our-friends{
+	padding-bottom: 76px;
+	
+}
+.friends-content{
+	margin-top: 30px;
+	margin-bottom: 40px;
+	.card:nth-child(7), .card:nth-child(8){
+		display: none;
+	}
+}
+
+	#dop-menu.active{
+		display: none;
 	}
 	.main{
 		margin-top: 12rem;
@@ -18,7 +35,8 @@
 	height: auto;
 	&__navigation{
 		margin-top: 4rem;
-		margin-bottom: 76px;
+		margin-bottom: 75px;
+		padding-bottom: 0;
 	}
 	&__card{
 		height: auto;
@@ -90,18 +108,41 @@
 			display: none;
 		}
 		&__container{
-			padding:0;   
-			 margin-top: 0;
-    justify-content: space-around;
-    width: 100%;
-	 padding: 0px;
+			  
+	// 		 margin-top: 0;
+   //  justify-content: flex-end;
+   //  width: 100%;
+	 padding: 0px 10px;
 		}
+	}
+ .our-friends{
+	padding-top: 162px;
+	padding-bottom: 42px;
+	.content{
+		h3{
+			font-size: 25px;
+			width: auto;
+		}
+		
+	}
+ }
+.friends-content{
+	grid-template-columns: 270px;
+	margin-top: 42px;
+	margin-bottom: 42px;
+	.card:nth-child(4), .card:nth-child(5), .card:nth-child(6){
+		display: none;
+	}
+}
+
+	#dop-menu.active{
+		display: block;
 	}
 	.burger{
 		display: flex;
 	}
    .logo{
-			margin-left: -0.8rem;
+			margin-right: auto;
 		}
 
 		h4{
